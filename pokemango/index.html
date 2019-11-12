@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Who are you?</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+
+        img {width: auto; height: 60%;}
+
+        #p1{position: fixed; left: 50%; top: 30%; transform: translate(-50%, -50%);}
+
+        #p2{position: fixed; left: 50%; top: 60%; transform: translate(-50%, -50%);}
+
+        #aiselect{position: fixed; left: 50%; top: 40%; transform: translate(-50%, -50%);}
+
+        #buttons{position: fixed; left: 50%; top: 78%; transform: translate(-50%, -50%);}
+
+        #game{display: none;}
+
+        button {
+            background-color: white;
+            font-family: 'Press Start 2P', cursive;
+            color: black;
+            padding: 12px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border: 4px solid black;
+            margin: 5px;}
+
+        button:hover {background-color: #c8c8c8; cursor: pointer;}
+
+        p{
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            font-size: 24px;}
+
+        #resetButton{display: none; position: fixed; left: 50%; bottom: 0%; transform: translate(-50%, -50%);}
+
+    
+    </style>
+
+</head>
+
+<body>
+
+    <script src = "game.js"></script>
+
+    <div id = "levelselect">
+        <img src = "boygirl2.png" id = "aiselect"></div>
+        <div id = "buttons"><button onclick="mpstart()">I'm Playing Against A Friend<button onclick="aistart()">Im Playing Alone</div>
+    </div>
+
+    <div id = "game">
+        <p id = "victorytext"> Make your move! </p>
+        <p id = "counter"> 0 : 0</p>
+        <div id = "p1"><p>player 1</p><button onclick="p1rock()">Fire</button><button onclick="p1paper()">Water</button><button onclick="p1scissors()">Grass</button></div>
+        <div id = "p2"><p>player 2</p><button onclick="p2rock()">Fire</button><button onclick="p2paper()">Water</button><button onclick="p2scissors()">Grass</button></div>
+        <p><button id = "resetButton" onclick="reset()">reset</button></p>
+    </div>
+
+
+
+</body>
+
+</html>
